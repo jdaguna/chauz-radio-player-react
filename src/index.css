@@ -1,0 +1,891 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:300');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+#home{
+  padding-right: 50px;
+}
+#music{
+  padding-right: 50px;
+}
+
+*, *:before, *:after{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing:border-box;
+  box-sizing: border-box;
+}
+
+.App{
+  background: white;
+}
+
+header{
+  color: #000;
+  text-decoration: none;
+  height: 100px;
+}
+
+/* keep footer at bottom */
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box; /*new*/
+}
+
+*:before,
+*:after {
+ box-sizing: border-box;
+}
+
+html, body{
+  height: 100%;
+  position: relative;
+}
+
+.App{
+  min-height: 100vh; /* will cover the 100% of viewport */
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding-bottom: 300px; /* height of your footer */
+}
+
+footer{
+  font-family: 'Poppins';
+  letter-spacing: .08em;
+  height: 300px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 80px;
+  color: #ffffff;
+  background-color: #000000;
+  text-align: center;
+}
+footer h1{
+    font-size: 50px;
+}
+
+
+/* end */
+
+
+
+
+
+/* Album Page: Start*/
+#displayPlayTime, #displayDurationTime{
+  width: 50px;
+}
+
+#songAndPlayer{
+  padding: 30px 100px;
+  width: 560px;
+}
+
+
+#albumInfo{
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+}
+
+.current-time{
+  color: #fff;
+  font-family: Poppins;
+  font-weight: bold;
+}
+
+.total-time{
+  color: #fff;
+  font-family: Poppins;
+  font-weight: bold;
+}
+.ion-ios-volume-low{
+  display: inline-block;
+  color: #fff;
+  font-size: 30px;
+}
+
+.ion-ios-play:before{
+    padding-left: 5px;
+}
+
+.ion-ios-volume-high{
+  display: inline-block;
+  color: #fff;
+  font-size: 30px;
+}
+
+.time-control-inline{
+  display: inline-block;
+  margin: 15px 0px 0px 20px;
+}
+
+
+#volume-bar{
+  display: inline-block;
+  max-width: 30%;
+  margin: 0px 15px 0px 15px;
+}
+.seek-bar{
+  -webkit-appearance: none;
+  width: 50%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  max-width: 566px;
+
+}
+
+.seek-bar:hover {
+  opacity: 1;
+}
+
+
+.seek-bar::-webkit-slider-thumb:hover{
+  background: orange;
+}
+.seek-bar::-moz-range-thumb:hover {
+  background: orange;
+}
+
+.seek-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 5px;
+  height: 27px;
+  background: orange;
+  cursor: pointer;
+}
+
+.seek-bar::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #000;
+  cursor: pointer;
+}
+
+.album{
+  background: url(./img/bg-1080px.jpg) repeat center;
+/*  height: 100vh;*/
+
+}
+
+.album-details{
+  padding-top: 30px;
+  color: #ffffff;
+  font: 'Rubik';
+}
+
+.album-details h1, h2, div{
+    font: 'Rubix';
+    font-size: 20px;
+    letter-spacing: 0.05em;
+}
+
+.content-details{
+  padding: 0px 0px 50px 30px;
+  text-align: left;
+  position: absolute;
+  bottom: 0px;
+  text-decoration: none;
+  color: #ffffff;
+  font: 'Rubik';
+}
+
+.flexParentAlbum{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;/*  media query for larger screens 1400px width*/
+  flex-grow: 1;
+
+}
+
+.flexChildAlbum{
+  padding-top: 30px;
+  padding: 10px;
+}
+
+th, td {
+  padding: 15px;
+  text-align: center;
+}
+
+
+.album{
+  text-align: center;
+}
+
+#album-cover-art{
+  width: 100%;
+  max-width: 400px;
+
+  -moz-box-shadow: 0 -4px 61px 0px #fff;
+  -webkit-box-shadow:0 -4px 61px 0px #fff;
+  box-shadow: 0 -4px 61px 0px #fff;
+  border: 3px solid white;
+  border-radius: 10px;
+}
+/*
+.table-bg{
+  border-radius: 10px;
+  display: inline-block;
+  background: rgba(182, 182, 182, .9);
+  padding: 0px 50px;
+}
+*/
+
+#song-list:hover{
+  color: orange;
+}
+
+.song:hover{
+  background: white;
+  color: orange;
+}
+table, td, th{
+  border-collapse: collapse;
+  border: 0;
+  border-bottom: 1px solid black;
+}
+
+table{
+  display: inline-block;
+  background: rgba(182, 182, 182, .9);
+}
+
+#song-list{
+    border: 0;
+}
+
+#song-list tr{
+  width: 100px;
+  color: #000;
+}
+
+
+#song-list td button{
+  background-color: transparent;
+  border: none;
+  color: #000;
+  max-width: 10px;
+}
+
+#buttons{
+  height: 80px;
+}
+
+
+#buttons #play-pause{
+  width:80px;
+  height: 80px;
+  font-size: 30px;
+}
+
+
+#buttons button{
+  padding: 0px 5px 0px 5px;
+  background-color: #fff;
+  border: 2px solid gray;
+  color: #000;
+  border-radius: 70px;
+  width: 50px;
+  height: 50px;
+}
+#buttons button:hover{
+  color: orange;
+}
+/* Album Page: End */
+
+/* Music Page: Start */
+  .libraryHeader1{
+    font-size: 40px;
+    font-family: 'helvetica';
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    padding-top: 50px;
+    height: 135px;
+    background: rgba(182, 182, 182, 0.1);
+  }
+
+ .flexParent{
+   padding-top: 50px;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: center;
+   width: 100%;
+   flex-shrink: 1;
+ }
+
+ .flexChild{/* Attention needed */
+   flex-shrink: 1;
+   padding: 20px;
+   margin: 0px auto;
+   color: #ffffff;
+   text-decoration: none;
+   text-align: center;
+   filter: drop-shadow(0px 35x 20px rgba(159, 157, 157, 0.8));
+ }
+
+ .flexChild img{
+   width: 100%;
+ }
+
+.flexChild:hover {
+  filter: drop-shadow(0px 20px 12px rgba(159, 157, 157, 0.64));
+}
+
+
+
+
+ .content {
+   position: relative;
+   width: 100%;
+   max-width: 400px;
+   margin: auto;
+   overflow: hidden;
+ }
+
+ .content .content-overlay {
+   background: rgba(0,0,0,0.7);
+   position: absolute;
+   height: 99%;
+   width: 100%;
+   left: 0;
+   top: 0;
+   bottom: 0;
+   right: 0;
+   opacity: 0;
+   -webkit-transition: all 0.4s ease-in-out 0s;
+   -moz-transition: all 0.4s ease-in-out 0s;
+   transition: all 0.4s ease-in-out 0s;
+ }
+
+ .content:hover .content-overlay{
+   opacity: 1;
+ }
+
+
+ .content-details {
+   position: absolute;
+   text-align: left;
+   padding-left: 1em;
+   padding-right: 1em;
+   width: 100%;
+   top: 50%; /*starting positon */
+   left: 50%;
+   opacity: 0;
+   -webkit-transform: translate(-50%, 30%);
+   -moz-transform: translate(-50%, 30%);
+   transform: translate(-50%, 30%); /*ending positon*/
+   -webkit-transition: all 0.3s ease-in-out 0s;
+   -moz-transition: all 0.3s ease-in-out 0s;
+   transition: all 0.3s ease-in-out 0s;
+ }
+
+ .content:hover .content-details{
+   top: 50%;
+   left: 50%;
+   opacity: 1;
+ }
+
+
+ .fadeIn-bottom{
+   top: 80%;
+ }
+
+#containerMusic{
+  margin-top: 50px;
+}
+
+#musicDarkBox{
+  position: relative;
+  color: black;
+  margin: 0px auto;
+  text-transform: lowercase;
+  font-weight: bold;
+  padding: 15px 50px;
+  border: 2px solid black;
+  height: 20px;
+  width: 60px;
+  bottom: 40px;
+}
+
+
+#musicDarkBox:hover{
+  background: #000;
+  color: #fff;
+}
+
+
+#musicBox{
+  color: white;
+  margin: 0px auto;
+  text-transform: lowercase;
+  font-weight: 400;
+  letter-spacing: 2px;
+  padding: 15px 50px;
+  border: 2px solid white;
+  height: 20px;
+  width: 60px;
+}
+.custom-icon{
+  font-size: 128px;
+}
+
+.custom-icon-small{
+  font-size: 64px;
+}
+
+
+#musicBox:hover{
+  background: #fff;
+  color: #000;
+}
+
+.linkActive, a{
+  color: #000;
+  text-decoration: none;
+
+}
+main{
+  height: 100%;
+}
+
+
+button{
+    color: #000;
+    font-size:20px;
+}
+
+nav{
+  font: 'Rubik';
+  font-weight: bold;
+
+}
+
+
+
+/* start when doing the bounce */
+.arrow-container
+{
+ display: flex;
+ height: 50vh;
+}
+
+.container-footer{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ margin: auto auto 1rem auto
+}
+
+.text-label{
+ text-transform: uppercase;
+ font-family: helvetica;
+ font-size: 0.75rem;
+ letter-spacing: 0.2em;
+ color: #fff;
+}
+
+.arrow-circle-down{
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin: 16px 0;
+}
+
+.bounce{
+  animation: bounce 2s;
+  animation-delay: 1s;
+  animation-iteration-count: 2;
+}
+
+@keyframes bounce {
+    0%,
+    25%,
+    50%,
+    75%,
+    100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-12px);
+    }
+}
+
+/* end */
+
+
+
+/* responsive website start */
+body {
+  font: 15px/1.5 Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+.container{
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.dark{
+  padding: 15px;
+  background: #35424a;
+  color: #ffffff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+
+header{
+  background: #ffffff;
+  color: #000000;
+  padding-top: 15px;
+  min-height: 70px;
+/*  border-bottom: #32a0c2 3px solid; */
+}
+
+header a{
+  color: #00000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+header li{
+  float: left;
+  display: inline;
+  padding: 0 20px 0 20px;
+}
+
+header #branding {
+  float: left;
+}
+
+header #branding h1{
+  margin: 0;
+}
+
+header nav{
+  float: right;
+  margin-top: 10px;
+}
+
+header .highlight, header .current a {
+  color: #000000;
+  font-weight: bold;
+}
+
+
+
+
+header a:hover{
+  color: #cccccc;
+  font-weight: bold;
+}
+
+/* Showcase */
+
+#showcase {
+  min-height: 400px;
+  background:url('./img/headerbg.jpg') no-repeat center;
+  background-size: cover;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: helvetica;
+}
+
+#showcase h1{
+  margin-top: 100px;
+  font-size: 55px;
+  margin-bottom: 10px;
+}
+
+#showcase p{
+  margin-bottom: 50px;
+  font-size: 20px;
+}
+
+
+.containerFlex{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly ;
+  flex-wrap: wrap;
+}
+
+.box{
+  padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  line-height: 45px;
+  font-size: 25px;
+}
+
+
+
+
+
+@media screen and (min-width:768px){
+  #mainBranding{
+    float: left;
+    padding-top: 5px;
+    padding-left: 30px;
+  }
+}
+
+
+
+
+
+@media(max-width: 767px){
+
+  #mainBranding{
+    float: center;
+
+  }
+
+  .App{
+    padding-bottom: 150px; /* match this with footer height */
+  }
+
+  footer{
+    font-family: 'Poppins';
+    letter-spacing: .06em;
+    height: 150px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    color: #ffffff;
+    background-color: #000000;
+    text-align: center;
+    line-height: 18px;
+  }
+
+  footer h1{
+      font-size: 25px;
+  }
+
+  footer h3{
+      padding-top: 5px;
+      font-size: 13px;
+  }
+  .custom-icon-small{
+    font-size: 32px;
+  }
+
+
+
+  #librayHeader{
+    position: relative;
+    left: 0px;
+    top: 0px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    font-size: 40px;
+    color: #fff;
+    text-align: left;
+  }
+
+
+
+  /* flex-box start */
+  .flexParent {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px;
+  }
+
+  .flexParent > div {
+    background-color: #f1f1f1;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+  }
+
+
+  .flexChild{
+    margin: 0px auto;
+    padding: 10px 5px 5px 5px;
+    max-width: 350px;
+  }
+  /* flex-box end*/
+
+  /* react app styles*/
+  .content .content-overlay {
+    opacity: 0;
+  }
+
+  .content-details{
+    opacity: 1;
+    top: 30%;
+    left: 50%;
+  }
+
+  #home{
+    float: left;
+    padding-left: 50px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  #music{
+    float: right;
+    padding-right: 50px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+
+
+  .custom-icon{
+    font-size: 64px;
+  }
+  header #branding,
+  header nav,
+  header nav li,
+  #newsletter h1,
+  #newsletter form,
+  #boxes .box,
+  article#main-col,
+  aside#sidebar {
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+
+  h1{
+   line-height: 1;
+  }
+
+
+  header {
+    padding-bottom: 20px;
+  }
+
+  #showcase h1 {
+    margin-top: 40px;
+  }
+
+  #newsletter button {
+    display: block;
+    width: 100%;
+  }
+
+
+  #newsletter form input[type="email"],
+  .contact input,
+  .contact textarea,
+  .contact label{
+    width: 100%;
+    margin-bottom: 5px;
+  }
+/*bounce down arrow */
+.arrow-container
+{
+ display: flex;
+ height: 30vh;
+}
+}
+/*end of responsive website */
+
+
+
+
+@media screen and (max-width: 374px){
+  /* App Styles: Start */
+  #mainBranding{
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+  }
+
+
+  /* App Styles: End */
+
+  /* Library Page: Start */
+
+  .libraryHeader1{
+    font-size: 30px;
+    letter-spacing: 0.08em;
+    padding-top: 20px;
+    height: 85px;
+    background: rgba(182, 182, 182, 0.1);
+  }
+
+  .flexParent{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .flexChild img{
+    width: 100%;
+    flex-shrink: 1;
+  }
+
+  /* Library Page: End */
+
+
+  /* Landing Page: Start */
+  #showcase h1{
+    font-size: 40px;
+  }
+
+  #showcase p{
+    padding-top: 15px;
+    font-size: 15px;
+  }
+  .containerFlex{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .box{
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 15px;
+  }
+  /* Landing Page: End */
+
+  .album-details{
+    padding-top: 10px;
+  }
+
+  .flexChildAlbum{
+    padding-top: 30px;
+  }
+
+  #time-control{
+    width: 350px;
+    padding-right: 10px;
+  }
+
+}
