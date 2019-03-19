@@ -13,7 +13,7 @@ class App extends Component {
 
        <header>
               {/*style MobileNav*/}
-             <MobileNav width={'10%'}/>
+              <MobileNav />
 
 
         <nav>
