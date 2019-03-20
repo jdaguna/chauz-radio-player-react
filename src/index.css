@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Rubik:300');
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 
-
-#menu{
-    display: none;
+#menuMobile{
+  display: none;
 }
 
 #time-control{
@@ -659,6 +658,8 @@ header a:hover{
 
 
 @media screen and (min-width:768px){
+
+
   #mainBranding{
     float: left;
     padding-top: 5px;
@@ -672,12 +673,18 @@ header a:hover{
 
 
 @media(max-width: 767px){
-
-
-
-#menu{
-  display: inline;
+  #menuMobile{
+    display: inline-block;
+  }
+  
+#menuMobile{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: #ffffff;
+  background-color:
 }
+
 
  #homeLink{
    display: none;
@@ -699,12 +706,14 @@ header a:hover{
 
   /* Color/shape of burger icon bars */
   .bm-burger-bars {
-    background: #373a47;
+    /*background: #373a47;*/
+    background: #000;
   }
 
   /* Color/shape of burger icon bars on hover*/
   .bm-burger-bars-hover {
-    background: #a90000;
+    /*background: #a90000;*/
+    background: gray;
   }
 
   /* Position and sizing of clickable cross button */
@@ -722,7 +731,7 @@ header a:hover{
   Sidebar wrapper styles
   Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
   */
-  .bm-menu-wrap {
+  .bm--wrap {
     position: fixed;
     height: 100%;
   }
@@ -761,6 +770,7 @@ header a:hover{
     display: inline;
     float: left;
     padding-left: 30px;
+    white-space: nowrap;
   }
 
   .App{
@@ -913,14 +923,14 @@ header a:hover{
 
 
 @media screen and (max-width: 374px){
+
   /* App Styles: Start */
-/*
+
   #mainBranding{
-    text-align: center;
-    line-height: 50px;
-    font-size: 30px;
+    font-size: 29px;
+    padding-top: 11px;
   }
-*/
+
 
   /* App Styles: End */
 

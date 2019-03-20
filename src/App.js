@@ -10,13 +10,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-
        <header>
-              {/*style MobileNav*/}
-              <MobileNav />
-
-
         <nav>
+            <div id="menuMobile">
+              <MobileNav />
+            </div>
            <Link activeclassname="linkActive" id="homeLink" to='/'>HOME</Link>
 	         <Link activeclassname="linkActive" id="music" to='/Library'>MUSIC</Link>
         </nav>
